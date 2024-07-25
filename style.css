@@ -53,7 +53,7 @@ body{
 main{
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 24px;
     flex: 1;   
     /* If parent container(body) has display of flex, then priortise the current container to take as much space of the parent container as possible*/
     /* it sends the footer further down the page */
@@ -87,14 +87,20 @@ main{
 }
 
 #enterTodo button{
+    position: relative;
+    right: 0;
+    top: 0; 
+    height: 100%;
     background: rgb(155, 4, 178);
     color: white;
     outline: none;
     border: none;
     font-weight: 600;
-    padding: 12px 8px;
+    padding: 12px 10px;
     border-radius: 2rem;
     font-family: 'Bungee', sans-serif;
+   
+    
     
 
 }
@@ -109,5 +115,56 @@ main{
     cursor: pointer;
     background: transparent;
     color: rgb(155, 4, 178);
+
+}
+
+#todos
+{
+    display: flex;
+    gap: 4px;
+    flex-direction: column;
+
+}
+
+.todoItem {
+    display: flex;
+    align-items: center;
+    
+}
+
+.todoItem p {
+    flex: 1;
+}
+
+.actions {
+    display: flex;
+    
+    align-items: center;
+    gap: 14px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: medium;
+}
+
+.actions i:hover {
+    color: rgb(116, 39, 238);
+}
+
+footer {
+    display: grid;
+    place-items: center;
+}
+
+footer a {
+    color: inherit;
+}
+
+footer i {
+    cursor: pointer;
+    font-size: 40px;
+}
+
+footer i:hover {
+    color: rgb(151, 55, 215);
 
 }
