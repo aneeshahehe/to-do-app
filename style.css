@@ -1,0 +1,113 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css');
+html{
+    font-family: 'Noto sans', sans-serif;     
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    transition-duration: 300ms;
+
+}
+h1{
+    font-family: 'Bungee', sans-serif;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;  /*  push content to the opposite ends*/
+}
+
+.plusIcon
+{
+    font-size: 1.5rem;
+    color: white;
+}
+.plusIcon:hover{
+    color: rgb(155, 4, 178);
+    cursor: pointer;
+}
+/* RESPONSIVE PART OF WEB PAGE */
+header, main, footer{
+    width: 800px;
+    max-width: 100%;    /*elememts are always going to stay within the viewport no matter how much we drag and make the page smaller*/
+
+    margin: 0 auto;    /*to center block-level elements- 0 on top and bottom and auto for automatically adjusting the left and right to distribute the empty space*/
+}
+
+body{
+    min-height: 100vh;
+    background: rgb(226, 161, 242);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 24px;
+    
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 1;   
+    /* If parent container(body) has display of flex, then priortise the current container to take as much space of the parent container as possible*/
+    /* it sends the footer further down the page */
+
+
+}
+
+
+#enterTodo input  /*take all the 'input' tags within enterTodo section*/
+{
+    background: transparent;
+    outline: none;
+    padding: 10px 20px;
+
+    color: rgb(255, 255, 255);
+    flex: 1;    /*of both children - input and button, input is going to take the majority of space*/
+    border: none;
+    font-weight: 600;
+    height: 40;
+    font-size: medium;
+
+    
+}
+
+#enterTodo form{
+    display: flex;
+    align-items: stretch;
+    outline: none;
+    border: 2px solid rgb(155, 4, 178);
+    border-radius: 2rem;
+}
+
+#enterTodo button{
+    background: rgb(155, 4, 178);
+    color: white;
+    outline: none;
+    border: none;
+    font-weight: 600;
+    padding: 12px 8px;
+    border-radius: 2rem;
+    font-family: 'Bungee', sans-serif;
+    
+
+}
+
+#enterTodo input::placeholder
+{
+    color: rgb(187, 111, 204);
+}
+
+#enterTodo button:hover
+{
+    cursor: pointer;
+    background: transparent;
+    color: rgb(155, 4, 178);
+
+}
